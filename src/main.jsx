@@ -14,6 +14,8 @@ import EditContact, {
 } from "./routes/edit";
 import { action as destroyAction } from "./routes/destroy";
 import Index from "./routes/index";
+import Demo from './routes/context/demo'
+import Count from './routes/hooks/useState';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -48,7 +50,14 @@ const router = createBrowserRouter([
       
     ]
   },
-  
+  {
+    path:'/demo',
+    element:<Demo/>
+  },
+  {
+    path:'/state',
+    element:<Count/>
+  }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
