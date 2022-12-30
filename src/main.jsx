@@ -16,6 +16,7 @@ import { action as destroyAction } from "./routes/destroy";
 import Index from "./routes/index";
 import Demo from './routes/context/demo'
 import Count from './routes/hooks/useState';
+import EffectCount from './routes/hooks/useEffect';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
   {
     path:'/state',
     element:<Count/>
+  },
+  {
+    path:'/effect',
+    element:<EffectCount/>
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
