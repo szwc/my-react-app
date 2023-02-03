@@ -17,6 +17,7 @@ import Index from "./routes/index";
 import Demo from './routes/context/demo'
 import Count from './routes/hooks/useState';
 import EffectCount from './routes/hooks/useEffect';
+import LifeCircleDemo from './routes/lifeCircle';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -62,11 +63,18 @@ const router = createBrowserRouter([
   {
     path:'/effect',
     element:<EffectCount/>
+  },
+  {
+    path:'/life',
+    element:<LifeCircleDemo/>
   }
 ]);
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     {/* <App /> */}
+//     <RouterProvider router={router} />
+//   </React.StrictMode>,
+// )
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    {/* <App /> */}
     <RouterProvider router={router} />
-  </React.StrictMode>,
 )

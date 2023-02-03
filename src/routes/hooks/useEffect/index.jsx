@@ -5,15 +5,19 @@ function EffectCount(props){
     const [count,setCount] = useState(0)
     let navigate = useNavigate();
     useEffect(()=>{
+        console.log('other effect');
+    },[])
+    useEffect(()=>{
         console.log('effect');
         document.title = `你点击了${count}次`
         const timer = setInterval(() => {
             console.log('定时器');
         }, 2000);
         return ()=>{
+            console.log('clean up');
             clearInterval(timer)
         }
-    },[])
+    },[count])
     function toState(){
         console.log('redirect',redirect);
         navigate('/state')
