@@ -1,31 +1,35 @@
-import React from 'react';
-import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
-import { Link, Outlet, redirect, useNavigate } from "react-router-dom";
+import React from 'react'
+import {
+  LaptopOutlined,
+  NotificationOutlined,
+  UserOutlined
+} from '@ant-design/icons'
+import { Breadcrumb, Layout, Menu, theme } from 'antd'
+import { Link, Outlet, redirect, useNavigate } from 'react-router-dom'
 // import Contact from './routes/contact';
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Footer, Sider } = Layout
 // const items1 = ['post', '2', '3'].map((key) => ({
 //   key,
 //   label: `nav ${key}`,
 // }));
 const items1 = [
   {
-    key:'demo',
-    label:'demo',
-    path:'demo'
+    key: 'demo',
+    label: 'demo',
+    path: 'demo'
   },
   {
-    key:'effect',
-    label:'effect',
-    path:'effect'
+    key: 'effect',
+    label: 'effect',
+    path: 'effect'
   },
   {
-    key:'life',
-    label:'life',
-    path:'life'
+    key: 'life',
+    label: 'life',
+    path: 'life'
   }
 ]
-const topMenus = items1.map(item=><Link to={item.path}>{item.label}</Link>)
+const topMenus = items1.map((item) => <Link to={item.path}>{item.label}</Link>)
 // const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, index) => {
 //   const key = String(index + 1);
 //   return {
@@ -43,38 +47,38 @@ const topMenus = items1.map(item=><Link to={item.path}>{item.label}</Link>)
 // });
 const items2 = [
   {
-    label:'hook示例',
-    key:'hook-demo',
-    icon:React.createElement(UserOutlined),
-    children:[
+    label: 'hook示例',
+    key: 'hook-demo',
+    icon: React.createElement(UserOutlined),
+    children: [
       {
         key: 'state',
         label: `state`,
-        path:'state'
+        path: 'state'
       },
       {
         key: 'life',
         label: `生命周期`,
-        path:'life'
+        path: 'life'
       },
       {
         key: 'effect',
         label: `effect`,
-        path:'effect'
-      },
+        path: 'effect'
+      }
     ]
   }
 ]
 const App = (props) => {
-  let navigate = useNavigate();
+  let navigate = useNavigate()
   const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
-  const topMenuOnclick = ({item, key, keyPath, domEvent})=>{
-    console.log('nav item',item);
-    console.log('nav key', key );
-    console.log('nav keyPath', keyPath);
-    console.log('nav sfsdsfdsfdf', keyPath);
+    token: { colorBgContainer, borderRadiusLG }
+  } = theme.useToken()
+  const topMenuOnclick = ({ item, key, keyPath, domEvent }) => {
+    console.log('nav item', item)
+    console.log('nav key', key)
+    console.log('nav keyPath', keyPath)
+    console.log('nav sfsdsfdsfdf', keyPath)
     navigate(`/${keyPath[0]}`)
   }
   return (
@@ -82,7 +86,7 @@ const App = (props) => {
       <Header
         style={{
           display: 'flex',
-          alignItems: 'center',
+          alignItems: 'center'
         }}
       >
         <div className="demo-logo" />
@@ -99,9 +103,11 @@ const App = (props) => {
         /> */}
       </Header>
       <Content
-        style={{
-          // padding: '0 48px',
-        }}
+        style={
+          {
+            // padding: '0 48px',
+          }
+        }
       >
         {/* <Breadcrumb
           style={{
@@ -116,12 +122,12 @@ const App = (props) => {
           style={{
             padding: '24px 0',
             background: colorBgContainer,
-            borderRadius: borderRadiusLG,
+            borderRadius: borderRadiusLG
           }}
         >
           <Sider
             style={{
-              background: colorBgContainer,
+              background: colorBgContainer
             }}
             width={200}
           >
@@ -130,7 +136,7 @@ const App = (props) => {
               // defaultSelectedKeys={['1']}
               defaultOpenKeys={['sub1']}
               style={{
-                height: '100%',
+                height: '100%'
               }}
               items={items2}
               onClick={topMenuOnclick}
@@ -156,6 +162,6 @@ const App = (props) => {
         Ant Design ©{new Date().getFullYear()} Created by Ant UED
       </Footer> */}
     </Layout>
-  );
-};
-export default App;
+  )
+}
+export default App

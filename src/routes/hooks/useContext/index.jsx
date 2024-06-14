@@ -1,6 +1,4 @@
-import { useContext } from "react";
+import { useContext } from 'react'
 
-function ExampleContext(){
-    
-}
+function ExampleContext() {}
 export default ExampleContext
