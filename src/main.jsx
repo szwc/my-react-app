@@ -18,63 +18,60 @@ import Demo from './routes/context/demo'
 import Count from './routes/hooks/useState';
 import EffectCount from './routes/hooks/useEffect';
 import LifeCircleDemo from './routes/lifeCircle';
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,
+    element: <App/>,
+    // element: <div>hello world</div>,
     errorElement: <ErrorPage />,
-    loader: rootLoader,
-    action: rootAction,
+    // loader: rootLoader,
+    // action: rootAction,
     children:[
+      // {
+      //   path: "contacts",
+      //   element: <Contact />,
+      //   loader: contactLoader,
+      //   action: contactAction,
+      // },
+      // {
+      //   path: "contacts/:contactId",
+      //   element: <Contact />,
+      //   loader: contactLoader,
+      //   action: contactAction,
+      // },
+      // {
+      //   path: "contacts/:contactId/edit",
+      //   element: <EditContact />,
+      //   loader: contactLoader,
+      //   action: editAction,
+      // },
+      // {
+      //   path: "contacts/:contactId/destroy",
+      //   action: destroyAction,
+      //   errorElement: <div>Oops! There was an error.</div>,
+      // },
       {
-        errorElement: <ErrorPage />,
-        children:[
-          { index: true, element: <Index /> },
-          {
-            path: "contacts/:contactId",
-            element: <Contact />,
-            loader: contactLoader,
-            action: contactAction,
-          },
-          {
-            path: "contacts/:contactId/edit",
-            element: <EditContact />,
-            loader: contactLoader,
-            action: editAction,
-          },
-          {
-            path: "contacts/:contactId/destroy",
-            action: destroyAction,
-            errorElement: <div>Oops! There was an error.</div>,
-          },
-        ]
+        path:'demo',
+        element:<Demo/>
+      },
+      {
+        path:'state',
+        element:<Count/>
+      },
+      {
+        path:'effect',
+        element:<EffectCount/>
+      },
+      {
+        path:'life',
+        element:<LifeCircleDemo/>
       }
-      
     ]
   },
-  {
-    path:'/demo',
-    element:<Demo/>
-  },
-  {
-    path:'/state',
-    element:<Count/>
-  },
-  {
-    path:'/effect',
-    element:<EffectCount/>
-  },
-  {
-    path:'/life',
-    element:<LifeCircleDemo/>
-  }
+  
 ]);
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <React.StrictMode>
-//     {/* <App /> */}
-//     <RouterProvider router={router} />
-//   </React.StrictMode>,
-// )
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
     <RouterProvider router={router} />
+  </React.StrictMode>,
 )

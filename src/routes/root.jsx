@@ -59,8 +59,8 @@ export default function Root() {
               ></div>
             </Form>
             <Form method="post">
-            <button type="submit">New</button>
-          </Form>
+              <button type="submit">New</button>
+            </Form>
           </div>
           <nav>
             {contacts.length ? (
