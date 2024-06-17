@@ -39,6 +39,10 @@ class ChildCom extends React.Component {
   }
   componentWillUnmount() {
     console.log('childCom WillUnmount---')
+    console.log('eslint test')
+  }
+  dfsa = () => {
+    console.log('dsfjsdfojd dsfjsfjdsfs ')
   }
   render() {
     console.log('childCom render---')
