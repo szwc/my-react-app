@@ -43,6 +43,7 @@ class ChildCom extends React.Component {
   }
   dfsa = () => {
     console.log('dsfjsdfojd dsfjsfjdsfs ')
+    console.log('dsfjsdfojd dsfjsfjdsfs sdfs ')
   }
   dfsadsfs = () => {
     console.log('dsfdsfdsfjsdfojd   dsfjsfjdsfs ', this.state)
