@@ -44,6 +44,9 @@ class ChildCom extends React.Component {
   dfsa = () => {
     console.log('dsfjsdfojd dsfjsfjdsfs ')
   }
+  dfsadsfs = () => {
+    console.log('dsfdsfdsfjsdfojd   dsfjsfjdsfs ', this.state)
+  }
   render() {
     console.log('childCom render---')
     const { count } = this.state
@@ -57,7 +60,7 @@ class ChildCom extends React.Component {
         >
           count++
         </button>
-        <h2>parent num {this.props.num}</h2>
+        {/* <h2>parent num {this.props.num}</h2> */}
         <h2>self count {count}</h2>
       </>
     )
@@ -87,7 +90,7 @@ export default class LifeCircleDemo extends React.Component {
   static getDerivedStateFromProps(props, state) {
     console.log('parent static getDerivedStateFromProps', props, state)
     return {
-      // num:1
+      num: 1
     }
   }
   // componentWillMount(){
@@ -126,7 +129,7 @@ export default class LifeCircleDemo extends React.Component {
         >
           num++
         </button>
-        <ChildCom num={num} />
+        <ChildCom />
       </>
     )
   }
