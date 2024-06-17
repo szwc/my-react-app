@@ -27,6 +27,11 @@ export default [
       'arrow-body-style': 'off',
       'prefer-arrow-callback': 'off'
     },
-    ignores: ['.config/*']
+    ignores: ['.config/*'],
+    settings: {
+      react: {
+        version: 'detect' // 或者明确指定版本号，例如 "17.0"
+      }
+    }
   }
 ]
