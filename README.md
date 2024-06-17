@@ -8,7 +8,7 @@ React 18会再Strict Mode中引入一个新的开发模式。React将会对每�
 
 ## 规范
 
-- eslint
+### eslint
 
 ```
 npm init @eslint/config@latest
@@ -24,7 +24,7 @@ npm init @eslint/config@latest
 }
 ```
 
-- prettier
+### prettier
 
 ```
 yarn add prettier -D
@@ -32,7 +32,7 @@ yarn add prettier -D
 yarn add eslint-config-prettier eslint-plugin-prettier -D
 ```
 
-- Husky
+### Husky
 
 ```
 yarn add husky -D
@@ -62,6 +62,17 @@ npx husky add .husky/pre-commit "npm run lint"
 yarn add lint-staged -D
 
 ```
+
+### commitlint
+
+```
+yarn add @commitlint/cli @commitlint/config-conventional -D
+
+```
+
+创建 .commitlintrc.cjs
+
+.husky目录 添加 commit-msg 文件
 
 # 问题
 
