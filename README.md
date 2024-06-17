@@ -134,6 +134,9 @@ settings: {
 [commitlint 规范参考文档](https://github.com/conventional-changelog/commitlint#what-is-commitlint)
 
 [style lint参考1 知乎](https://zhuanlan.zhihu.com/p/700412551)
+
 [style lint参考2 掘金](https://juejin.cn/post/7185920750765735973?searchId=202406171654115E104E724B2EE73D9DA9#heading-28)
+
 [styleLint中午官方文档](https://stylelint.nodejs.cn/)
+
 [对less的支持](https://juejin.cn/post/7240838046789812282?searchId=202406171725573BDAF8C0F24C53401A70#heading-7)
