@@ -29,7 +29,11 @@ const items1 = [
     path: 'life'
   }
 ]
-const topMenus = items1.map((item) => <Link to={item.path}>{item.label}</Link>)
+const topMenus = items1.map((item) => (
+  <Link key={item.key} to={item.path}>
+    {item.label}
+  </Link>
+))
 // const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, index) => {
 //   const key = String(index + 1);
 //   return {
@@ -65,6 +69,11 @@ const items2 = [
         key: 'effect',
         label: `effect`,
         path: 'effect'
+      },
+      {
+        key: 'demo',
+        label: `demo`,
+        path: 'demo'
       }
     ]
   }

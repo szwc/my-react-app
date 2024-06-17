@@ -74,6 +74,24 @@ yarn add @commitlint/cli @commitlint/config-conventional -D
 
 .husky目录 添加 commit-msg 文件
 
+### stylelint
+
+```
+yarn add stylelint stylelint-config-html stylelint-config-recommended-scss stylelint-config-standard stylelint-config-standard-scss stylelint-config-recess-order postcss postcss-html stylelint-config-prettier -D
+
+yarn add -D postcss-less
+
+yarn add -D stylelint-order
+```
+
+- 对less的支持
+  > Vite本身提供了对.scss/.sass/.less/.styl/.stylus文件的内置支持。无需再安装特定的Vite插件，但必须安装相应的预处理器依赖。
+
+```
+yarn add -D less
+
+```
+
 # 问题
 
 ## eslint 安装的新版本(9.x) 配置较之前版本变化很大
@@ -97,6 +115,12 @@ settings: {
 }
 ```
 
+## stylelint 配置文件添加了参考文档的一些规则，一直报错
+
+![执行stylelint报的错](image-3.png)
+
+查看了知乎 https://zhuanlan.zhihu.com/p/700412551 这个文档，感觉是因为stylelint版本太高，所以以前的规则都失效了
+
 # 参考链接
 
 [react router官方文档地址](https://reactrouter.com/en/main)
@@ -108,3 +132,8 @@ settings: {
 [Git工作流规范（husky + lint-staged](http://yanhongzhi.com/post/project_specification4.html#toc-f4b)
 
 [commitlint 规范参考文档](https://github.com/conventional-changelog/commitlint#what-is-commitlint)
+
+[style lint参考1 知乎](https://zhuanlan.zhihu.com/p/700412551)
+[style lint参考2 掘金](https://juejin.cn/post/7185920750765735973?searchId=202406171654115E104E724B2EE73D9DA9#heading-28)
+[styleLint中午官方文档](https://stylelint.nodejs.cn/)
+[对less的支持](https://juejin.cn/post/7240838046789812282?searchId=202406171725573BDAF8C0F24C53401A70#heading-7)

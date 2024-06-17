@@ -12,7 +12,7 @@ import Contact, {
 import EditContact, { action as editAction } from './routes/edit'
 import { action as destroyAction } from './routes/destroy'
 import Index from './routes/index'
-import Demo from './routes/context/demo'
+import Demo from './routes/Demo'
 import Count from './routes/hooks/useState'
 import EffectCount from './routes/hooks/useEffect'
 import LifeCircleDemo from './routes/lifeCircle'
