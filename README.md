@@ -106,3 +106,5 @@ settings: {
 [eslint vscode保存自动格式化参考](https://juejin.cn/post/6987198844261892127)
 
 [Git工作流规范（husky + lint-staged](http://yanhongzhi.com/post/project_specification4.html#toc-f4b)
+
+[commitlint 规范参考文档](https://github.com/conventional-changelog/commitlint#what-is-commitlint)
