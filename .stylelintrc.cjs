@@ -1,6 +1,6 @@
 module.exports = {
   extends: ['stylelint-config-standard'],
-  plugins: ['stylelint-order'],
+  plugins: ['stylelint-order', 'stylelint-stylus'],
   custonSyntax: 'postcss-less',
   rules: {
     // indentation: 2,
