@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Card, Menu } from 'antd'
 import {
   MoonOutlined,
@@ -9,9 +9,13 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { HomeOutlined, UserOutlined } from '@ant-design/icons'
 import { useSelector, useDispatch } from 'react-redux'
 import { setDark } from '@/store/slices/theme'
+import ThemeModal from '@/components/themeModal'
+import { globalConfig } from '@/globalConfig'
 import './header.less'
 
 function Header() {
+  // 是否显示主题色选择对话框
+  const [showThemeModal, setShowThemeModal] = useState(false)
   // 创建路由定位钩子
   const location = useLocation()
   // 创建路由钩子
@@ -74,9 +78,31 @@ function Header() {
               }}
             ></Button>
           )}
-          <Button icon={<ThemeOutlined />} shape="circle"></Button>
+          {
+            // 当globalConfig配置了主题色，并且数量大于0时，才显示主题色换肤按钮
+            globalConfig.customColorPrimarys &&
+              globalConfig.customColorPrimarys.length > 0 && (
+                <Button
+                  icon={<ThemeOutlined />}
+                  shape="circle"
+                  onClick={() => {
+                    setShowThemeModal(true)
+                  }}
+                ></Button>
+              )
+          }
         </div>
       </div>
+      {
+        // 显示主题色换肤对话框
+        showThemeModal && (
+          <ThemeModal
+            onClose={() => {
+              setShowThemeModal(false)
+            }}
+          />
+        )
+      }
     </Card>
   )
 }
