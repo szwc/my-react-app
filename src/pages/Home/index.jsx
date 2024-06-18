@@ -1,15 +1,21 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { goto } from '@/api'
-import { Button } from 'antd'
+import { Button, theme } from 'antd'
 import './index.less'
+
+const { useToken } = theme
 
 function Home() {
   // 创建路由钩子
   const navigate = useNavigate()
+
+  // 获取Design Token
+  const { token } = useToken()
+
   return (
     <div className="P-home">
-      <h1>Home Page</h1>
+      <h1 style={{ color: token.colorText }}>Home Page</h1>
       <div className="ipt-con">
         <Button
           onClick={() => {
