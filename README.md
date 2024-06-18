@@ -121,6 +121,10 @@ settings: {
 
 查看了知乎 https://zhuanlan.zhihu.com/p/700412551 这个文档，感觉是因为stylelint版本太高，所以以前的规则都失效了
 
+## git 提交时 stylelint修复 stylus文件 报错
+
+待解决（只能先改为less文件）
+
 # 参考链接
 
 [react router官方文档地址](https://reactrouter.com/en/main)

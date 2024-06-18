@@ -1,24 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from '@/App'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Demo from '@/pages/Demo'
+import { ConfigProvider } from 'antd'
+import { RouterProvider } from 'react-router-dom'
+import { globalRouters } from '@/router'
+// 引入Ant Design中文语言包
+import zhCN from 'antd/locale/zh_CN'
 // 全局样式
 import '@/common/styles/frame.less'
-export const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        path: 'demo',
-        element: <Demo />
-      }
-    ]
-  }
-])
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <ConfigProvider locale={zhCN}>
+    <RouterProvider router={globalRouters} />
+  </ConfigProvider>
 )
