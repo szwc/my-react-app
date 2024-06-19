@@ -9,7 +9,7 @@ import { Provider } from 'react-redux'
 import zhCN from 'antd/locale/zh_CN'
 // 全局样式
 import '@/common/styles/frame.less'
-import './mock'
+// import './mock'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
